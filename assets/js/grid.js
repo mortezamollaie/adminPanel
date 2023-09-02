@@ -15,4 +15,17 @@ $(document).ready(function () {
       $("#sidebar-toggle-show").removeClass("d-none");
     }, 300);
   });
+
+  $("#sidebar-toggle-show").click(function () {
+    $("#sidebar").fadeIn(300);
+    setTimeout(function () {
+      removeAllSidebarToggleClass();
+      $("#sidebar-toggle-hide").removeClass("d-none");
+      $("#sidebar-toggle-show").addClass("d-none");
+    }, 300);
+  });
+
+  $("#menu-toggle").click(function () {
+    $("#body-header").toggle(300);
+  });
 });
